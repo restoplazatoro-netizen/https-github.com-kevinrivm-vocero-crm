@@ -5,6 +5,27 @@ sigue el SemVer del [README](README.md#versiones): una menor trae funciones
 nuevas y actualizar es redesplegar. Desde 1.4.0, cada tag `vX.Y.Z` publica la
 imagen `ghcr.io/kevinrivm/vocero-crm:X.Y.Z`.
 
+## Fork pt-BR sobre 2.5.0 — 2026-10-25
+
+Interfaz en español y portugués de Brasil. El propietario elige el idioma
+predeterminado en Ajustes → Marca y cada navegador puede elegir otro en el
+acceso o el menú. La primera renderización, ayuda, controles y formatos
+regionales usan la preferencia resuelta.
+
+### Actualizar este fork desde 2.1
+
+Construir la imagen desde este código para incluir las traducciones. Se integran
+las migraciones oficiales 0023–0025 (webhooks, respuestas rápidas y notas internas);
+el contenedor las aplica al arrancar. En desarrollo, ejecutar `pnpm db:migrate`.
+El selector de idioma sigue en el menú de cuenta del escritorio y en el cajón
+móvil. Apariencia, respuestas rápidas, filtros, grabación de voz, notificaciones
+y atajos incorporan su catálogo en portugués. Nea mantiene su versión propia 2.0.2.
+
+Las instalaciones existentes conservan su idioma. Moneda, huso, datos guardados,
+plantillas de WhatsApp e idioma del agente permanecen independientes.
+La API de marca acepta locale opcional; clientes antiguos conservan el valor
+guardado. Véase [Idiomas](docs/idiomas.md).
+
 ## 2.5.0 — 2026-10-24
 
 Un Vocero nuevo por fuera, y a gusto de cada quien. Actualizar es
